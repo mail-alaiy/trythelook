@@ -7,9 +7,9 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 
 // Animation Variants
-const fadeInUpVariant = {
-  hidden: { opacity: 0, y: 40 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: 'easeOut' } },
+const fadeInLeftVariant = {
+  hidden: { opacity: 0, x: -40 },
+  show: { opacity: 1, x: 0, transition: { duration: 0.8, ease: 'easeOut' } },
 };
 
 const buttonHoverVariant = {
@@ -79,7 +79,7 @@ const ContactForm = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Section */}
           <motion.div 
-            variants={fadeInUpVariant}
+            variants={fadeInLeftVariant}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.2 }}
@@ -123,14 +123,14 @@ const ContactForm = () => {
           
           {/* Right Section - Form */}
           <motion.div
-            variants={fadeInUpVariant}
+            variants={fadeInLeftVariant}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.2 }}
             className="bg-white/5 backdrop-blur-sm p-8 rounded-xl border border-white/10"
           >
             <form onSubmit={handleSubmit} className="space-y-6">
-              <motion.div variants={fadeInUpVariant} initial="hidden" whileInView="show">
+              <motion.div variants={fadeInLeftVariant} initial="hidden" whileInView="show">
                 <Label htmlFor="name">Full Name</Label>
                 <Input
                   id="name"
@@ -143,7 +143,7 @@ const ContactForm = () => {
                 />
               </motion.div>
               
-              <motion.div variants={fadeInUpVariant} initial="hidden" whileInView="show">
+              <motion.div variants={fadeInLeftVariant} initial="hidden" whileInView="show">
                 <Label htmlFor="email">Email Address</Label>
                 <Input
                   id="email"
@@ -157,7 +157,7 @@ const ContactForm = () => {
                 />
               </motion.div>
               
-              <motion.div variants={fadeInUpVariant} initial="hidden" whileInView="show">
+              <motion.div variants={fadeInLeftVariant} initial="hidden" whileInView="show">
                 <Label htmlFor="brandName">Brand Name</Label>
                 <Input
                   id="brandName"
@@ -170,7 +170,7 @@ const ContactForm = () => {
                 />
               </motion.div>
               
-              <motion.div variants={fadeInUpVariant} initial="hidden" whileInView="show">
+              <motion.div variants={fadeInLeftVariant} initial="hidden" whileInView="show">
                 <Label htmlFor="message">Message</Label>
                 <Textarea
                   id="message"
