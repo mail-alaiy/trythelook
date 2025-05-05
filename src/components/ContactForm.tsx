@@ -1,10 +1,20 @@
-
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+
+// Animation Variants
+const fadeInUpVariant = {
+  hidden: { opacity: 0, y: 40 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: 'easeOut' } },
+};
+
+const buttonHoverVariant = {
+  hover: { scale: 1.05, transition: { duration: 0.3 } },
+};
 
 const ContactForm = () => {
   const { toast } = useToast();
@@ -61,14 +71,20 @@ const ContactForm = () => {
       .finally(() => {
         setIsSubmitting(false);
       });
-  };  
-  
+  };
 
   return (
     <section id="contact" className="section-padding bg-brand-purple-dark text-white">
       <div className="container mx-auto container-padding">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div>
+          {/* Left Section */}
+          <motion.div 
+            variants={fadeInUpVariant}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.2 }}
+            className="space-y-6"
+          >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Book a Custom Campaign</h2>
             <p className="text-white/80 mb-6 text-lg">
               Let's bring your next drop to life. Schedule a quick demo to see how Try The Look can transform your customers' shopping experience.
@@ -103,11 +119,18 @@ const ContactForm = () => {
                 </li>
               </ul>
             </div>
-          </div>
+          </motion.div>
           
-          <div className="bg-white/5 backdrop-blur-sm p-8 rounded-xl border border-white/10">
+          {/* Right Section - Form */}
+          <motion.div
+            variants={fadeInUpVariant}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.2 }}
+            className="bg-white/5 backdrop-blur-sm p-8 rounded-xl border border-white/10"
+          >
             <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="space-y-2">
+              <motion.div variants={fadeInUpVariant} initial="hidden" whileInView="show">
                 <Label htmlFor="name">Full Name</Label>
                 <Input
                   id="name"
@@ -118,9 +141,9 @@ const ContactForm = () => {
                   required
                   className="bg-white/10 border-white/20 text-white placeholder:text-white/50"
                 />
-              </div>
+              </motion.div>
               
-              <div className="space-y-2">
+              <motion.div variants={fadeInUpVariant} initial="hidden" whileInView="show">
                 <Label htmlFor="email">Email Address</Label>
                 <Input
                   id="email"
@@ -132,9 +155,9 @@ const ContactForm = () => {
                   required
                   className="bg-white/10 border-white/20 text-white placeholder:text-white/50"
                 />
-              </div>
+              </motion.div>
               
-              <div className="space-y-2">
+              <motion.div variants={fadeInUpVariant} initial="hidden" whileInView="show">
                 <Label htmlFor="brandName">Brand Name</Label>
                 <Input
                   id="brandName"
@@ -145,9 +168,9 @@ const ContactForm = () => {
                   required
                   className="bg-white/10 border-white/20 text-white placeholder:text-white/50"
                 />
-              </div>
+              </motion.div>
               
-              <div className="space-y-2">
+              <motion.div variants={fadeInUpVariant} initial="hidden" whileInView="show">
                 <Label htmlFor="message">Message</Label>
                 <Textarea
                   id="message"
@@ -158,17 +181,19 @@ const ContactForm = () => {
                   rows={4}
                   className="bg-white/10 border-white/20 text-white placeholder:text-white/50"
                 />
-              </div>
+              </motion.div>
               
-              <Button 
-                type="submit" 
-                className="w-full cta-button"
-                disabled={isSubmitting}
-              >
-                {isSubmitting ? "Submitting..." : "Book Your Campaign Demo"}
-              </Button>
+              <motion.div variants={buttonHoverVariant} whileHover="hover">
+                <Button 
+                  type="submit" 
+                  className="w-full cta-button"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? "Submitting..." : "Book Your Campaign Demo"}
+                </Button>
+              </motion.div>
             </form>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

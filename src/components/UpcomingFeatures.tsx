@@ -1,7 +1,16 @@
-
 import React from 'react';
+import { motion } from 'framer-motion';
 import { ShoppingCart, Users, Shirt } from "lucide-react";
 
+// Define animation variants
+const fadeUpVariant = {
+  hidden: { opacity: 0, y: 40 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: 'easeOut' } },
+};
+
+const hoverEffectVariant = {
+  hover: { scale: 1.05, transition: { duration: 0.3 } },
+};
 const features = [
   {
     icon: ShoppingCart,
@@ -36,9 +45,14 @@ const UpcomingFeatures = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <div 
-              key={index} 
+            <motion.div
+              key={index}
               className="bg-background rounded-xl p-6 shadow-md hover:shadow-xl transition-shadow border border-border relative overflow-hidden group"
+              variants={fadeUpVariant}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, amount: 0.2 }}
+              whileHover="hover"
             >
               {feature.comingSoon && (
                 <div className="absolute top-3 right-3 bg-brand-green text-brand-purple-dark text-xs font-bold px-2 py-1 rounded-full">
@@ -52,8 +66,11 @@ const UpcomingFeatures = () => {
               <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
               <p className="text-muted-foreground">{feature.description}</p>
               
-              <div className="absolute bottom-0 left-0 h-1 w-0 bg-brand-green group-hover:w-full transition-all duration-300"></div>
-            </div>
+              <motion.div
+                className="absolute bottom-0 left-0 h-1 w-0 bg-brand-green group-hover:w-full transition-all duration-300"
+                variants={hoverEffectVariant}
+              />
+            </motion.div>
           ))}
         </div>
       </div>
