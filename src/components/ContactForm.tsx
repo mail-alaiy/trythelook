@@ -27,24 +27,42 @@ const ContactForm = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate API call
-    setTimeout(() => {
-      toast({
-        title: "Form submitted successfully!",
-        description: "We'll get back to you as soon as possible.",
+  
+    const form = new FormData();
+    Object.entries(formData).forEach(([key, value]) => {
+      form.append(key, value);
+    });
+  
+    fetch("https://script.google.com/macros/s/AKfycbxXgTd1FNF6DNB4xIUx2HvytW3LZCeF5stKUUXNdDNtJYfWi0ZWfZhZGEFAR9_FHO1G/exec", {
+      method: "POST",
+      mode: "no-cors", // stays
+      body: form // must be FormData
+    })
+      .then(() => {
+        toast({
+          title: "Form submitted successfully!",
+          description: "We'll get back to you as soon as possible.",
+        });
+        setFormData({
+          name: '',
+          email: '',
+          brandName: '',
+          message: ''
+        });
+      })
+      .catch((err) => {
+        console.error(err);
+        toast({
+          title: "Error submitting form",
+          description: "Please try again later.",
+          variant: "destructive"
+        });
+      })
+      .finally(() => {
+        setIsSubmitting(false);
       });
-      
-      setFormData({
-        name: '',
-        email: '',
-        brandName: '',
-        message: ''
-      });
-      
-      setIsSubmitting(false);
-    }, 1500);
-  };
+  };  
+  
 
   return (
     <section id="contact" className="section-padding bg-brand-purple-dark text-white">

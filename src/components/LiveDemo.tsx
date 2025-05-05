@@ -17,7 +17,7 @@ const LiveDemo = () => {
         <div className="max-w-4xl mx-auto rounded-xl overflow-hidden shadow-2xl bg-white/5 backdrop-blur-sm p-1">
           <div className="aspect-video w-full bg-black/30 rounded-lg">
             <iframe 
-              src="https://ilikeit-demo.vercel.app" 
+              src="https://trythelook.vercel.app/" 
               title="Try The Look Demo" 
               className="w-full h-full rounded-lg"
               allow="camera; microphone"
@@ -29,7 +29,7 @@ const LiveDemo = () => {
           <Button 
             size="lg" 
             className="cta-button text-lg"
-            onClick={() => window.open('https://ilikeit-demo.vercel.app', '_blank')}
+            onClick={() => window.open('https://trythelook.vercel.app/', '_blank')}
           >
             Try the Live Demo
             <ExternalLink className="ml-2 h-4 w-4" />
