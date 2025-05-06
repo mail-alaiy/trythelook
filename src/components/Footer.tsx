@@ -51,7 +51,7 @@ const Footer = () => {
             <h3 className="text-lg font-bold mb-4">Contact</h3>
             <p className="text-white/70 mb-2">Email: pradyun@alaiy.com</p>
             
-            <div className="flex items-center space-x-4 mt-4">
+            {/*<div className="flex items-center space-x-4 mt-4">
               <motion.a
                 href="#"
                 className="text-white/70 hover:text-white transition-colors"
@@ -84,10 +84,9 @@ const Footer = () => {
               >
                 <Linkedin className="h-5 w-5" />
               </motion.a>
-            </div>
+            </div>*/}
           </motion.div>
         </div>
-        
         <motion.div
           className="border-t border-white/10 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center"
           initial={{ opacity: 0 }}

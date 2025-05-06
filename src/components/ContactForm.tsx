@@ -37,12 +37,12 @@ const ContactForm = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-  
+
     const form = new FormData();
     Object.entries(formData).forEach(([key, value]) => {
       form.append(key, value);
     });
-  
+
     fetch("https://script.google.com/macros/s/AKfycbxXgTd1FNF6DNB4xIUx2HvytW3LZCeF5stKUUXNdDNtJYfWi0ZWfZhZGEFAR9_FHO1G/exec", {
       method: "POST",
       mode: "no-cors", // stays

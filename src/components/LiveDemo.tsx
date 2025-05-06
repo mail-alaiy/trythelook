@@ -20,7 +20,7 @@ const LiveDemo = () => {
       id="demo" 
       className="section-padding bg-gradient-to-br from-brand-purple/90 to-brand-purple-dark text-white"
     >
-      <div className="container mx-auto container-padding">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Text and Heading Section */}
         <motion.div
           className="text-center mb-12"
@@ -29,9 +29,9 @@ const LiveDemo = () => {
           whileInView="show"
           viewport={{ once: true, amount: 0.2 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Experience It Yourself</h2>
-          <p className="text-white/80 max-w-2xl mx-auto">
-            See how seamless and impressive the try-on experience can be for your customers
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Experience It Yourself</h2>
+          <p className="text-white/80 max-w-2xl mx-auto text-sm sm:text-base">
+            See how seamless and impressive the try-on experience can be for your customers.
           </p>
         </motion.div>
 
@@ -63,7 +63,7 @@ const LiveDemo = () => {
         >
           <Button 
             size="lg" 
-            className="cta-button text-lg"
+            className="cta-button text-lg px-6 py-3 sm:px-8 sm:py-4"
             onClick={() => window.open('https://trythelook.vercel.app/', '_blank')}
           >
             Try the Live Demo
