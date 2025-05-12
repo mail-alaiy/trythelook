@@ -87,8 +87,9 @@ const ContactForm = () => {
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Book a Custom Campaign</h2>
             <p className="text-white/80 mb-6 text-lg">
-              Let's bring your next drop to life. Schedule a quick demo to see how Try The Look can transform your customers' shopping experience.
-            </p>
+  Let's bring your next drop to life. Schedule a quick demo to see how we can set up a {'<your-brand>'}.trythelook.ai to launch your next collection
+</p>
+
             
             <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
               <p className="font-medium">Why brands choose us:</p>
@@ -97,19 +98,19 @@ const ContactForm = () => {
                   <span className="rounded-full bg-brand-green h-5 w-5 flex items-center justify-center mt-0.5">
                     <span className="text-brand-purple-dark text-xs font-bold">✓</span>
                   </span>
-                  <span>Setup in less than a day</span>
+                  <span>Custom set up for your brand</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="rounded-full bg-brand-green h-5 w-5 flex items-center justify-center mt-0.5">
                     <span className="text-brand-purple-dark text-xs font-bold">✓</span>
                   </span>
-                  <span>No-code integration with your store</span>
+                  <span>No-code integration</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="rounded-full bg-brand-green h-5 w-5 flex items-center justify-center mt-0.5">
                     <span className="text-brand-purple-dark text-xs font-bold">✓</span>
                   </span>
-                  <span>Full analytics dashboard included</span>
+                  <span>Full analytics dashboard</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="rounded-full bg-brand-green h-5 w-5 flex items-center justify-center mt-0.5">

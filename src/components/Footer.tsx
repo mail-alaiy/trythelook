@@ -25,7 +25,7 @@ const Footer = () => {
             />
             <p className="text-white/70 max-w-md">
               AI-powered virtual try-on platform for fashion brands.
-              Transform your customers' shopping experience with cutting-edge technology.
+              Transform your customers' shopping experience with cutting-edge AI.
             </p>
           </motion.div>
           

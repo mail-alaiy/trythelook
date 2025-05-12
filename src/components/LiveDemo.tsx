@@ -31,7 +31,7 @@ const LiveDemo = () => {
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Experience It Yourself</h2>
           <p className="text-white/80 max-w-2xl mx-auto text-sm sm:text-base">
-            See how seamless and impressive the try-on experience can be for your customers.
+          See how seamless the try-on experience can be.
           </p>
         </motion.div>
 

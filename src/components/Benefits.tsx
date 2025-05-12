@@ -6,27 +6,27 @@ const benefits = [
   {
     icon: Clock,
     title: "Increases engagement time",
-    description: "Customers spend 4.2x longer on your site while trying on different looks."
+    description: " Customers spend more time on your site browsing."
   },
   {
     icon: RefreshCw,
     title: "Reduces returns",
-    description: "Cut return rates by up to 28% as customers know exactly how products will look."
+    description: "Allow customers to try the product virtually."
   },
   {
     icon: TrendingUp,
     title: "Boosts conversions",
-    description: "Achieve 37% higher conversion rates with try-before-you-buy confidence."
+    description: "More trying results in more buying."
   },
   {
     icon: Users,
     title: "Enhances loyalty",
-    description: "Build stronger customer relationships through innovative experiences."
+    description: " Build stronger customer relationships."
   },
   {
     icon: Share2,
     title: "Drives organic traffic",
-    description: "Create shareable moments as customers show off their virtual try-ons."
+    description: "People share their pictures with your new collection."
   }
 ];
 

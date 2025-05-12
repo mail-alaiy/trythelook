@@ -61,7 +61,7 @@ const HeroSection = () => {
               className="text-xl md:text-2xl text-muted-foreground max-w-xl"
               variants={fadeUpVariant}
             >
-              Launch a try-on campaign for your next collection with cutting-edge AI.
+              Launch a virtual try-on campaign for your brand’s next collection with our AI.
             </motion.p>
 
             <motion.div

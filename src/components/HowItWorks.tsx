@@ -5,18 +5,18 @@ import { motion } from 'framer-motion';
 const steps = [
   {
     icon: Eye,
-    title: "Browse your site",
-    description: "Customers browse your fashion collection as normal."
+    title: "See The Look",
+    description: "Customers browse your fashion website as normal."
   },
   {
     icon: Camera,
-    title: "Click your pic",
-    description: "Upload a selfie or choose from gallery to get started."
+    title: "Try The Look",
+    description: "Customers upload a selfie and see how the products look on them."
   },
   {
     icon: ShoppingBag,
-    title: "Try the look",
-    description: "Instantly see how your products look on them."
+    title: "Buy The look",
+    description: " Customers can instantly share their picture or add to cart."
   }
 ];
 
@@ -79,8 +79,7 @@ const HowItWorks = () => {
           viewport={{ once: true }}
         >
           <p className="text-lg sm:text-xl leading-relaxed">
-            "Powered by a proprietary diffusion model, our virtual try-on is fast, accurate, and cool as hell. 
-            Customers just upload a selfie, and the AI does the rest."
+            "Powered by a proprietary diffusion model, our virtual try-on is fast, accurate, and super fun to use. Customers just upload a selfie, and the AI does the rest."
           </p>
         </motion.div>
       </motion.div>
